@@ -17,7 +17,7 @@ int main()
 		for (j = 0; j < i; j++){
 		printf("*");
 		}
-		printf("\n");
+		printf("\n"); eller putchar('\n');
 	}
 	getchar();
 	return 0;
