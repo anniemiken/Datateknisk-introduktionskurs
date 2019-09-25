@@ -12,27 +12,32 @@ int main()
 	int tal = 0;
 	int antal_variabler;
 	int nytt_tal;
+	char igen = 'j';
 
-	srand((unsigned)time(NULL));
 
-	nytt_tal = rand() % 100 + 1;
+	while ((igen == 'j') || (igen == 'J')) {
+		
+		srand((unsigned)time(NULL));
 
-	printf("Datorn tänker på ett tal mellan 1 och 100. Varsågod att gissa:");
+		nytt_tal = rand() % 100 + 1;
 
-	antal_variabler = scanf_s("%d", &tal);
-	    
-	getchar(); //töm resultatet efter scanf
+ 		printf("Datorn tänker på ett tal mellan 1 och 100. Varsågod att gissa:");
 
-	while (tal != nytt_tal) {
-		if (tal > nytt_tal)
-			printf("Talet är för stort.");
-		else printf("Talet är för litet");
-		printf("Gissa igen: ");
 		antal_variabler = scanf_s("%d", &tal);
-		getchar();
-	}
 
-	printf("Rätt gissat");
-	getchar(); /* utan denna rad hoppar programmet ur consolefönstret när du kör programmet, och du hinner inte se resultatet*/
-	return 0;
+		getchar(); //töm resultatet efter scanf
+
+		while (tal != nytt_tal) {
+			if (tal > nytt_tal)
+				printf("Talet är för stort.");
+			else printf("Talet är för litet");
+			printf("Gissa igen: ");
+			antal_variabler = scanf_s("%d", &tal);
+			getchar();
+		}
+
+		printf("Rätt gissat\n Vill du gissa igen? (j/n): ");
+		igen = getchar();
+	}
+		return 0;
 }
