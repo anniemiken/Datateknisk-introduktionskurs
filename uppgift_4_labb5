@@ -1,0 +1,26 @@
+// Labb5_uppgift4_loop.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+
+
+
+
+int main()
+{
+	int i;
+	int j;
+
+	for (i = 0; i<5 ; i++){
+		printf("*");
+		for (j = 0; j < i; j++){
+		printf("*");
+		}
+		printf("\n");
+	}
+	getchar();
+	return 0;
+
+}
+
