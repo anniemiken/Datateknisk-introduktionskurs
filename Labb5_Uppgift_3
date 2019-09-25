@@ -1,0 +1,22 @@
+// Gissa_Tal_Labb5_3.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include "stdio.h"
+
+
+int main()
+{
+
+	int tal1, tal2, summa;
+
+	printf("Skriv in två tal som du ska addera");
+	scanf_s("%d%d", &tal1, &tal2);
+	getchar();
+	summa = tal1 + tal2;
+	printf("Summa av %d och %d = %d", tal1, tal2, summa);
+	getchar();
+
+
+    return 0;
+}
